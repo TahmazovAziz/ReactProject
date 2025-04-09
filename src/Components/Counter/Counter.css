@@ -1,0 +1,70 @@
+        .container-counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            max-width: 330px;
+            border-radius: 20px;
+            
+        }
+        
+        /* Counter Wrapper */
+        .counter {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        /* Timer Display */
+        .counter-taimer {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .counter-taimer h1 {
+            font-size: 6rem;
+            color: white;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            font-weight: 300;
+            cursor: pointer;
+            user-select: none;  
+        }
+        
+        /* Restart Button */
+        .restart-taimer {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 40px;
+            cursor: pointer;
+        }
+        
+        .restart-taimer button {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .restart-taimer button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .restart-taimer button:active {
+            transform: scale(0.95);
+        }
+        

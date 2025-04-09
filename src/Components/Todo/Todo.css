@@ -1,0 +1,98 @@
+.task {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Checkbox styling */
+  .task__check {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4a5568;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  
+  .task__check:checked {
+    background-color: #48bb78;
+    border-color: #48bb78;
+  }
+  
+  .task__check:checked::after {
+    content: "✓";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* Task text styling */
+  .task__value {
+    flex: 1;
+    margin: 0;
+    color: #2d3748;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .task__check:checked ~ .task__value {
+    color: #718096;
+    text-decoration: line-through;
+  }
+  
+  /* Delete button styling */
+  .task__del {
+    background: #fc8181;
+    color: white;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task__del:hover {
+    background: #f56565;
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .task {
+      padding: 10px 15px;
+      gap: 10px;
+    }
+    
+    .task__value {
+      font-size: 1rem;
+    }
+    
+    .task__del {
+      width: 24px;
+      height: 24px;
+      font-size: 0.9rem;
+    }
+  }
